@@ -754,15 +754,20 @@
               <span class="text-gray-700 dark:text-gray-400">Año de termino</span>
             <input type="text" class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" id="TAño" placeholder="Año" required>
           </label>
-          <br><label class="block text-sm">      
-                <div class="text-gray-700 dark:text-gray-600">
-                  <label for="F">Mediante la presente, expreso al Jefe de División y al Tecnologico de Estudios Superiores de Huixquilucan mi disponibilidad horaria definitiva, misma que servirá de manera informativa a mi Jefatura de División de adscripción para la futura asignación de horarios y materias a impartir para el periodo escolar descrito con anterioridad, reconociendo desde estos momentos que cualquier cambio, modificación o enmendadura a la misma, una vez entregada a la Jefatura de División, séra responsabilidad del que suscribe.</label>
-                </div>
-          </label>
+          
+        </div>
+
+          <div
+              class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
+            >
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Mediante la presente, expreso al Jefe de División y al Tecnologico de Estudios Superiores de Huixquilucan mi disponibilidad horaria definitiva, misma que servirá de manera informativa a mi Jefatura de División de adscripción para la futura asignación de horarios y materias a impartir para el periodo escolar descrito con anterioridad, reconociendo desde estos momentos que cualquier cambio, modificación o enmendadura a la misma, una vez entregada a la Jefatura de División, séra responsabilidad del que suscribe.
+              </p>
+            </div>
+          
 
               
 
-            </div>
 
 
             <!-- Validation inputs -->
@@ -1282,19 +1287,31 @@
               </select>
                 </div>
             </label>
-              <label class="block text-sm">
+              <label class="block mt-4 text-sm">
               <span class="text-gray-700 dark:text-gray-400">Materias a impartir</span>
               <div
               class="relative text-gray-500 focus-within:text-green-600 dark:focus-within:text-green-400"
             >
-              <select class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-select"id="materia" name="materia">
+              <select  class="block w-full pr-20 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-blue-400 focus:outline-none focus:shadow-outline-blue dark:focus:shadow-outline-gray form-select" id="materia" name="materia">
                 <option value="" disabled selected>Seleccionar</option>
-            </select>  
+            </select> 
+            <button
+            class="absolute inset-y-0 right-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-r-md active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+          >
+            Agregar
+          </button>
                 
-            </select>
+            
                   </div>
                 </div>
-                <button type="button" id="registrarN"  class="btn btn-success rounded submit px-3">Siguiente</button>
+                <div>
+                  <button
+                  type="button" id="registrarN" class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+                  >
+                    Siguiente
+                  </button>
+                </div>
+                
               </label>
               <script>
 
