@@ -2,6 +2,8 @@
 	session_start();
 
 	if(isset($_SESSION['user'])){
+   
+   
  ?>
 
 <html lang="es">
@@ -34,15 +36,15 @@
                         <section>
                                 <div class="form-group">
                                   <label for="User">Nombre completo</label>
-                                  <input type="text" class="form-control" id="User" aria-describedby="User" placeholder="" required>
+                                  <input type="text" class="form-control" id="User" aria-describedby="User" placeholder="" required <?php if(isset($nombre)) { ?> value="<?php echo $nombre; ?>" <?php } ?> >
                                 </div>
                                 <div class="form-group">
                                   <label for="Lic">Licenciatura</label>
-                                  <input type="text" class="form-control" id="Lic" placeholder="" required>
+                                  <input type="text" class="form-control" id="Lic" placeholder="" required <?php if(isset($licenciatura)) { ?> value="<?php echo $licenciatura; ?>" <?php } ?> >
                                 </div>
                                 <div class="form-group">
                                     <label for="Pos">Posgrados</label>
-                                    <input type="text" class="form-control" id="Posgrados" placeholder="" >
+                                    <input type="text" class="form-control" id="Posgrados" placeholder="" <?php if(isset($Posgrado)) { ?> value="<?php echo $Posgrado; ?>" <?php } ?>  >
                                   </div>
                                   <div class="form-group">
                                     <label for="Lic">Periodo escolar</label>
@@ -569,13 +571,13 @@
                   </div>
 
                   <button type="button" id="registrarN" class="btn btn-success">Siguiente</button>
-                  <a href="php/salir.php" class="btn btn-success">Salir del sistema</a>
+                  <a href="php/salir.php" class="btn btn-success">Salir</a>
 
 
 <script>
 
 function cargarCarreras() {
-    var array = ["Gastronomia", "Ingenieria en Sistemas Computacionales", "Ingenieria en Mecatronica", "Ingeneiria Civil", "Licenciatura en Administración", "Ingenieria Industrial", "Licenciatura en Biologia"];
+    var array = ["Gastronomia", "Sistemas", "Ingenieria en Mecatronica", "Ingeneiria Civil", "Licenciatura en Administración", "Ingenieria Industrial", "Licenciatura en Biologia"];
     array.sort();
     addOptions("carrera", array);
 }
@@ -597,6 +599,7 @@ function cargarMaterias() {
  
     var listaMaterias = {
       gastronomia: ["Materia 1", "Materia 2"],
+      sistemas:["Materia 3", "Materia 4"],
     }
     
     var carreras = document.getElementById('carrera')

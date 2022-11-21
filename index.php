@@ -55,6 +55,7 @@
 </html>
 
 <script type="text/javascript">
+
 	$(document).ready(function(){
 		$('#entrarSistema').click(function(){
 			if($('#usuario').val()==""){
@@ -73,8 +74,8 @@
 						url:"php/login.php",
 						data:cadena,
 						success:function(r){
-							if(r==1){
-								window.location="inicio.php";
+							if(r==1 ){
+								window.location="docente/index.html";
 							}else{
 								alert("Verifica tus datos");
 							}

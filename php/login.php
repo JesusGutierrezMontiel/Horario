@@ -8,6 +8,7 @@
 
 		$usuario=$_POST['usuario'];
 		$pass=sha1($_POST['password']);
+		$tipo;
 
 		$sql="SELECT * from usuarios where usuario='$usuario' and password='$pass'";
 		$result=mysqli_query($conexion,$sql);
